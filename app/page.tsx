@@ -4,6 +4,8 @@ import AboutMe from "./components/AboutMe";
 import Experiance from "./components/Experiance";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
+import ContactMe from "./components/ContactMe";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -25,6 +27,8 @@ export default function Home() {
           <Experiance />
           <Projects />
           <Technologies />
+          <ContactMe />
+          <Footer />
         </div>
       </div>
     </>

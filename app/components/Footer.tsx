@@ -1,0 +1,18 @@
+import React from "react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-black text-white font-sans py-4 mt-10">
+      <div className="container mx-auto text-center">
+        <p className="text-sm">&copy; 2024 Viraj Kawa. All rights reserved.</p>
+        <p className="text-sm mt-2">
+          About this website: built with React & Next.js (App Router & Server
+          Actions), TypeScript, Tailwind CSS, Framer Motion, React Email &
+          Resend, Vercel hosting and SwiperJs.
+        </p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
