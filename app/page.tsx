@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import AboutMe from "./components/AboutMe";
 import Experiance from "./components/Experiance";
 import Projects from "./components/Projects";
+import Technologies from "./components/Technologies";
 
 export default function Home() {
   return (
@@ -21,8 +22,9 @@ export default function Home() {
           <Navbar />
           <HeroSection />
           <AboutMe />
-          {/* <Experiance /> */}
+          <Experiance />
           <Projects />
+          <Technologies />
         </div>
       </div>
     </>

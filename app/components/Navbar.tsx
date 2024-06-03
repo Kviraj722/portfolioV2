@@ -20,11 +20,11 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className=" flex justify-between items-center p-2">
-      <div className="underline font-mono font-bold text-2xl -rotate-12 scale-75 translate-x-4 skew-y-3">
+    <div className="container flex justify-center items-center p-2 border-1 mt-2 rounded-full w-auto bg-stone-950  shadow-blurred-border">
+      {/* <div className="underline font-mono font-bold text-2xl -rotate-12 scale-75 translate-x-4 skew-y-3">
         <span className="text-primary-blue">K</span>viraj
-      </div>
-      <div className="flex gap-3 ">
+      </div> */}
+      <div className="flex gap-3 flex-wrap">
         {navs.map((nav, i) => (
           <div
             key={i}
@@ -34,13 +34,13 @@ const Navbar = () => {
           </div>
         ))}
       </div>
-      <div className="flex gap-4">
+      {/* <div className="flex gap-4">
         {socialLinks.map((link) => (
           <Link href={link.url} key={link.id}>
             <Image src={link.icon} alt={link.name} width={30} height={30} />
           </Link>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

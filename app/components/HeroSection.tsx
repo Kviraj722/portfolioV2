@@ -35,7 +35,7 @@ const HeroSection = () => {
     },
   ];
   return (
-    <div className="container bg-stone-950 mt-2 border-1 shadow-blurred-border rounded-3xl p-2 flex gap-5 flex-col justify-center items-center">
+    <div className="container mt-10 mb-10 bg-stone-950  border-1 shadow-blurred-border rounded-3xl p-2 flex gap-5 flex-col justify-center items-center">
       <div className="items-center flex flex-col gap-5 ">
         <Image
           src={ProfilePhoto}

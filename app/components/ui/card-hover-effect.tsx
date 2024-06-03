@@ -13,6 +13,7 @@ export const HoverEffect = ({
     description: string;
     link: string;
     status: boolean;
+    techStacks: string[];
   }[];
   className?: string;
 }) => {
@@ -29,7 +30,7 @@ export const HoverEffect = ({
         <Link
           href={item?.link}
           key={item?.link}
-          className="relative group block p-2 w-full"
+          className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -56,6 +57,7 @@ export const HoverEffect = ({
             <Status completed={item.status}>
               {item.status ? "Completed" : "In Progress"}
             </Status>
+            <TechStack techStacks={item.techStacks} />
           </Card>
         </Link>
       ))}
@@ -73,7 +75,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -106,7 +108,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm min-h-24",
         className
       )}
     >
@@ -136,5 +138,26 @@ export const Status = ({
     >
       {children}
     </p>
+  );
+};
+
+export const TechStack = ({
+  className,
+  techStacks,
+}: {
+  className?: string;
+  techStacks: string[];
+}) => {
+  return (
+    <div className={cn("flex space-x-2 mt-4 overflow-x-hidden", className)}>
+      {techStacks.map((tech, index) => (
+        <span
+          key={index}
+          className="bg-blue-600 text-white px-2 py-1 rounded-md text-xs font-extrabold"
+        >
+          {tech}
+        </span>
+      ))}
+    </div>
   );
 };
