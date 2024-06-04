@@ -20,7 +20,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="container flex justify-center items-center p-2 border-1 mt-2 rounded-full w-auto bg-stone-950  shadow-blurred-border">
+    <div className="container flex justify-center items-center p-2 mt-2 rounded-full w-auto bg-stone-950 ">
       {/* <div className="underline font-mono font-bold text-2xl -rotate-12 scale-75 translate-x-4 skew-y-3">
         <span className="text-primary-blue">K</span>viraj
       </div> */}

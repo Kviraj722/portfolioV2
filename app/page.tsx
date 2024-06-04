@@ -7,6 +7,7 @@ import Technologies from "./components/Technologies";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
 import CodingProfiles from "./components/CodingProfiles";
+import TestiNomials from "./components/TestiNomials";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
           <AboutMe />
           <Experiance />
           <Projects />
+          <TestiNomials /> 
           <CodingProfiles />
           <Technologies />
           <ContactMe />

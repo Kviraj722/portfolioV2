@@ -31,7 +31,7 @@ const Projects = () => {
   return (
     <div className="mt-10 mb-10">
       <Heading heading="Notable projects:" />
-      <div className="border-1 mt-6 flex container shadow-blurred-border rounded-lg p-2">
+      <div className="mt-6 flex container rounded-lg p-2">
         <HoverEffect items={projects} />
       </div>
     </div>

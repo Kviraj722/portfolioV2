@@ -5,7 +5,7 @@ import { FaReact } from "react-icons/fa";
 const Experience = () => (
   <div className="mt-10 mb-10 flex flex-col gap-2">
     <Heading heading="Professional History:" />
-    <div className="container flex flex-col border-1 shadow-blurred-border rounded-md p-6 mt-3">
+    <div className="container flex flex-col rounded-md p-6 mt-3">
       <div className="flex justify-between items-center mb-4">
         <div>
           <h1 className="text-3xl font-sans">Tuvoc Technologies</h1>

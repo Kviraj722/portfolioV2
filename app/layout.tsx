@@ -4,7 +4,7 @@ import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-const plexoMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["300"] });
+// const plexoMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["300"] });
 export const metadata: Metadata = {
   title: "Viraj Kawa",
   description: "Portfolio website v2",
@@ -17,7 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={plexoMono.className}>{children}</body>
+      {/* <body className={plexoMono.className}>{children}</body> */}
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

@@ -7,8 +7,7 @@ const Footer = () => {
         <p className="text-sm">&copy; 2024 Viraj Kawa. All rights reserved.</p>
         <p className="text-sm mt-2">
           About this website: built with React & Next.js (App Router & Server
-          Actions), TypeScript, Tailwind CSS, Framer Motion, React Email &
-          Resend, Vercel hosting and SwiperJs.
+          Actions), TypeScript, Tailwind CSS, Framer Motion, Nodemailer, Aceternity UI, Vercel hosting and SwiperJs.
         </p>
       </div>
     </footer>
