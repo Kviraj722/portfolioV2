@@ -9,7 +9,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Heading from "./Heading";
-import Link from "next/link";
 const TestiNomials = () => {
   const testiNomial = [
     {
@@ -47,14 +46,9 @@ const TestiNomials = () => {
           centeredSlides={true}
           slidesPerView={1}
           autoplay={{
-            delay: 2000,
+            delay: 5000,
           }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
-          onSlideChange={() => console.log("slide change")}
         >
           {testiNomial.map((testi) => (
             <SwiperSlide key={testi.id}>
@@ -83,15 +77,6 @@ const TestiNomials = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-
-      <div className="container flex justify-end mt-5">
-        <Link
-          href={"/testinomial"}
-          className="border-1 shadow-blurred-border w-60 h-20 p-2 bg-black rounded-2xl hover:text-black hover:bg-blue-600 hover:transition-all duration-75 hover:ease-in-out "
-        >
-          Give testinomial
-        </Link>
       </div>
     </div>
   );

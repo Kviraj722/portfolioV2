@@ -9,17 +9,10 @@ import Footer from "./components/Footer";
 import CodingProfiles from "./components/CodingProfiles";
 import TestiNomials from "./components/TestiNomials";
 
+
 export default function Home() {
   return (
     <>
-      {/* <div className="">
-        <Navbar />
-        <HeroSection />
-        <AboutMe />
-        <Experiance />
-        <Projects />
-      </div> */}
-
       <div className="bg-black bg-grid-white/[0.2] relative">
         <div className="absolute pointer-events-none inset-0 flex bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         <div className="relative z-20 bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
@@ -28,11 +21,10 @@ export default function Home() {
           <AboutMe />
           <Experiance />
           <Projects />
-          <TestiNomials /> 
+          <TestiNomials />
           <CodingProfiles />
           <Technologies />
           <ContactMe />
-
           <Footer />
         </div>
       </div>
