@@ -1,48 +1,16 @@
-// import React from "react";
-// import Linkdeln from "@/public/Linkdeln.png";
-// import Github from "@/public/github.png";
-// import Link from "next/link";
-// import Image from "next/image";
-// const Navbar = () => {
-//   const navs = [
-//     "About me",
-//     "Experiance",
-//     "Project",
-//     "Testimonials",
-//     "Profiles",
-//     "Skills",
-//     "Contact me",
-//   ];
-//   return (
-//     <div className="container flex justify-center items-center p-2 mt-2 rounded-full bg-stone-950 ">
-//       <div className="flex gap-2 flex-wrap w-auto">
-//         {navs.map((nav, i) => (
-//           <div
-//             key={i}
-//             className="p-1 w-32 items-center text-center transition-all ease-in duration-75 hover:bg-primary-blue hover:text-white rounded-3xl cursor-pointer"
-//           >
-//             {nav}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
 
 const Navbar = () => {
   const navs = [
-    "About me",
-    "Experience",
-    "Project",
-    "Testimonials",
-    "Profiles",
-    "Skills",
-    "Contact me",
+    { name: "About me", id: "about-me" },
+    { name: "Experience", id: "experience" },
+    { name: "Projects", id: "projects" },
+    { name: "Testimonials", id: "testimonials" },
+    { name: "Profiles", id: "profiles" },
+    { name: "Skills", id: "skills" },
+    { name: "Contact me", id: "contact-me" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -53,11 +21,11 @@ const Navbar = () => {
         <div className="hidden md:flex gap-2">
           {navs.map((nav, i) => (
             <Link
-              href={`#${nav.toLowerCase().replace(" ", "-")}`}
+              href={`#${nav.id}`}
               key={i}
               className="p-1 w-32 text-center transition-all ease-in duration-75 hover:bg-primary-blue hover:text-white rounded-3xl cursor-pointer"
             >
-              {nav}
+              {nav.name}
             </Link>
           ))}
         </div>
@@ -96,11 +64,11 @@ const Navbar = () => {
         <div className="md:hidden mt-2 bg-stone-950 p-4 rounded-lg">
           {navs.map((nav, i) => (
             <Link
-              href={`#${nav.toLowerCase().replace(" ", "-")}`}
+              href={`#${nav.id}`}
               key={i}
               className="block p-2 text-center transition-all ease-in duration-75 hover:bg-primary-blue hover:text-white rounded-lg cursor-pointer"
             >
-              {nav}
+              {nav.name}
             </Link>
           ))}
         </div>

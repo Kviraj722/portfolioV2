@@ -8,6 +8,7 @@ import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
 import CodingProfiles from "./components/CodingProfiles";
 import TestiNomials from "./components/TestiNomials";
+import AnimatedSection from "./components/AnimatedSection";
 
 export default function Home() {
   return (
@@ -16,14 +17,30 @@ export default function Home() {
         <div className="absolute pointer-events-none inset-0 flex bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         <div className="relative z-20 bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
           <Navbar />
-          <HeroSection />
-          <AboutMe />
-          <Experiance />
-          <Projects />
-          <TestiNomials />
-          <CodingProfiles />
-          <Technologies />
-          <ContactMe />
+          <AnimatedSection id="hero-section">
+            <HeroSection />
+          </AnimatedSection>
+          <AnimatedSection id="about-me">
+            <AboutMe />
+          </AnimatedSection>
+          <AnimatedSection id="experience">
+            <Experiance />
+          </AnimatedSection>
+          <AnimatedSection id="projects">
+            <Projects />
+          </AnimatedSection>
+          <AnimatedSection id="testimonials">
+            <TestiNomials />
+          </AnimatedSection>
+          <AnimatedSection id="profiles">
+            <CodingProfiles />
+          </AnimatedSection>
+          <AnimatedSection id="skills">
+            <Technologies />
+          </AnimatedSection>
+          <AnimatedSection id="contact-me">
+            <ContactMe />
+          </AnimatedSection>
           <Footer />
         </div>
       </div>
