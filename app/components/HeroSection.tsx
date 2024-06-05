@@ -42,7 +42,7 @@ const HeroSection = () => {
           className="border-blue-500 border rounded-full mt-5 h-60 w-60"
         />
         <h1 className="text-2xl font-bold ">Viraj Kawa</h1>
-        <div className="flex text-4xl sm:text-3xl w-auto">
+        <div className="flex text-3xl sm:text-3xl w-auto">
           I&apos;m <FlipWords words={words} className="font-extrabold w-auto" />
           <p className="">developer. </p>
         </div>

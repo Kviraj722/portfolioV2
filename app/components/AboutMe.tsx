@@ -31,11 +31,10 @@ const AboutMe = () => {
               explored various design elements and libraries, with some of my
               favorites being{" "}
               <span className="text-blue-400 italic font-bold">
-                Tailwind CSS, ShadCN UI, Next UI, Material UI, and Daisy UI
+                Tailwind CSS, ShadCN UI, Next UI, Material UI, and Daisy UI.
               </span>{" "}
-              Tailwind CSS, ShadCN UI, Next UI, and Daisy UI. I am constantly
-              eager to learn new technologies and I love the feeling of finally
-              discovering a more{" "}
+              I am constantly eager to learn new technologies and I love the
+              feeling of finally discovering a more{" "}
               <span className="text-blue-400 italic font-bold">efficient</span>{" "}
               solution to a problem.
             </p>
