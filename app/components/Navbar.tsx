@@ -7,7 +7,7 @@ const Navbar = () => {
     { name: "About me", id: "about-me" },
     { name: "Experience", id: "experience" },
     { name: "Projects", id: "projects" },
-    { name: "Testimonials", id: "testimonials" },
+    // { name: "Testimonials", id: "testimonials" },
     { name: "Profiles", id: "profiles" },
     { name: "Skills", id: "skills" },
     { name: "Contact me", id: "contact-me" },
@@ -16,9 +16,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="container mx-auto p-2 mt-2 bg-transparent">
-      <div className="flex justify-center  bg-transparent p-4 rounded-full">
-        <div className="hidden md:flex gap-2">
+    <nav className="container mx-auto">
+      <div className="justify-center w-full md:flex hidden p-4 rounded-full">
+        <div className="hidden md:flex">
           {navs.map((nav, i) => (
             <Link
               href={`#${nav.id}`}
@@ -30,15 +30,15 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-      <div className="md:hidden items-center flex justify-end">
+      <div className="md:hidden items-center flex justify-end p-3">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="text-white focus:outline-none"
         >
           <svg
-            className="w-6 h-6"
+            className={`${isOpen ? "bg-white" : "bg-black"} w-6 h-6 rounded-full`}
             fill="none"
-            stroke="currentColor"
+            stroke={isOpen ? "#000" : "currentColor"}
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -61,7 +61,7 @@ const Navbar = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="md:hidden mt-2 bg-stone-950 p-4 rounded-lg">
+        <div className={`md:hidden bg-stone-900 p-4 rounded-lg`}>
           {navs.map((nav, i) => (
             <Link
               href={`#${nav.id}`}
