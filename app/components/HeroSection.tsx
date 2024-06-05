@@ -10,7 +10,12 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 import Link from "next/link";
 
 const HeroSection = () => {
-  const words = ["Full stack", "Software", "Frontend", "Backend"];
+  const words = [
+    "Fullstack Developer",
+    "Software Engineer",
+    "Frontend Developer",
+    "Backend Developer",
+  ];
   const socialLinks = [
     {
       id: 1,
@@ -32,7 +37,7 @@ const HeroSection = () => {
     },
   ];
   return (
-    <div className="container mt-10 mb-10 bg-stone-950  rounded-3xl p-2 flex gap-5 flex-col justify-center items-center">
+    <div className="container mt-10 mb-10 rounded-3xl p-2 flex gap-5 flex-col justify-center items-center">
       <div className="items-center flex flex-col gap-5 ">
         <Image
           src={ProfilePhoto}
@@ -42,9 +47,9 @@ const HeroSection = () => {
           className="border-blue-500 border rounded-full mt-5 h-60 w-60"
         />
         <h1 className="text-2xl font-bold ">Viraj Kawa</h1>
-        <div className="flex text-3xl sm:text-3xl w-auto">
-          I&apos;m <FlipWords words={words} className="font-extrabold w-auto" />
-          <p className="">developer. </p>
+        <div className="flex text-3xl sm:text-3xl w-auto h-10">
+          I&apos;m{" "}
+          <FlipWords words={words} className="font-extrabold w-80 h-10 " />
         </div>
       </div>
       <div className="flex gap-4 items-center justify-center w-96">

@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 import CodingProfiles from "./components/CodingProfiles";
 import TestiNomials from "./components/TestiNomials";
 
-
 export default function Home() {
   return (
     <>
