@@ -32,9 +32,9 @@ export default function Home() {
             <AnimatedSection id="projects">
               <Projects />
             </AnimatedSection>
-            <AnimatedSection id="testimonials">
+            {/* <AnimatedSection id="testimonials">
               <TestiNomials />
-            </AnimatedSection>
+            </AnimatedSection>  //! Hidding as for now */}
             <AnimatedSection id="profiles">
               <CodingProfiles />
             </AnimatedSection>
