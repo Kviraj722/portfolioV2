@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "./Heading";
 import { FaReact } from "react-icons/fa";
+import Link from "next/link";
 
 const Experience = () => (
   <div className="flex flex-col gap-2">
@@ -64,6 +65,12 @@ const Experience = () => (
         </div>
       </div>
     </div>
+    <Link
+      href="https://drive.google.com/file/d/1aFbvI9S4SUNNcs61gq4gHrlOKb4O4R5f/view"
+      className="container font-semibold text-blue-500 text-xl flex justify-end p-2 hover:underline"
+    >
+      View Résumé
+    </Link>
   </div>
 );
 

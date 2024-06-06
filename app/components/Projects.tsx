@@ -14,7 +14,7 @@ const Projects = () => {
     {
       title: "Grab a bite",
       description:
-        "Grab a bite is a food recommandation app which allow users to find their favourite spot nearby.",
+        "Grab a bite is a food recommendation app which allow users to find their favourite spot nearby.",
       link: "https://food-rec-viraj.vercel.app",
       status: false,
       techStacks: ["NextJs", "MongoDB", "TailwindCSS"],

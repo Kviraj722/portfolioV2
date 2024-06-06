@@ -44,7 +44,9 @@ export default function Home() {
             <AnimatedSection id="contact-me">
               <ContactMe />
             </AnimatedSection>
-            <Footer />
+            <AnimatedSection id="contact-me">
+              <Footer />
+            </AnimatedSection>
           </div>
         </div>
       </div>

@@ -55,6 +55,10 @@ const HeroSection = () => {
           />
         </div>
       </div>
+      <p>
+        I build <span className="text-blue-500"> pixel-perfect</span>,
+        accessible products for the <span className="text-blue-500">web</span>.
+      </p>
       <div className="flex gap-4 items-center justify-center w-96">
         {socialLinks.map((link) => (
           <Link href={link.url} key={link.id}>

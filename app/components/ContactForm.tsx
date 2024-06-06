@@ -51,13 +51,17 @@ const ContactForm = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-black text-white">
       <div className="w-full max-w-lg p-8">
-        <h2 className="text-2xl text-center font-sans">Contact Me</h2>
+        <h2 className="text-3xl font-semibold text-center font-sans">
+          Contact Me
+        </h2>
         <p className="text-center mt-2 font-sans">
-          Please contact me directly at{" "}
-          <a href="mailto:kawa.135viraj@gmail.com" className="text-blue-400">
+          Impressed by my work? Feel free to reach out! I&apos;m always open to
+          new opportunities, collaborations on exciting projects, or even just a
+          friendly hello. You can email me at {"   "}
+          <a href="mailto:kawa.135viraj@gmail.com" className="text-blue-500">
             kawa.135viraj@gmail.com
           </a>{" "}
-          or through this form.
+          or use this form. I&apos;m always available and just an email away.
         </p>
         <form className="mt-8 space-y-6 font-sans" onSubmit={handleSubmit}>
           <div>
