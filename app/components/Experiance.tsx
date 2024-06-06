@@ -15,14 +15,14 @@ const Experience = () => (
         </div>
         <p className="font-sans">
           2023 -{" "}
-          <span className="bg-green-700 border-1 border-white p-1 rounded-md text-white font-semibold">
+          <span className="bg-blue-500 border-1 border-white p-1 rounded-md text-white font-semibold">
             Present
           </span>
         </p>
       </div>
-      <div className="flex justify-center bg-stone-950 container">
+      <div className="flex justify-center bg-stone-950 container rounded-md p-2">
         <div className="max-w-4xl">
-          <p className="text-md leading-relaxed mt-4 mb-4">
+          <p className="text-md leading-relaxed mb-4">
             Tuvoc Technologies is a fast-growing web and mobile app development
             company in India, specializing in PHP, Laravel, and Custom Web and
             App Development. The company has delivered over 100+ projects
