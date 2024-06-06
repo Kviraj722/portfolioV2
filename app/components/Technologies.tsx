@@ -37,7 +37,7 @@ const Technologies = () => {
   return (
     <div className="container ">
       <Heading heading="Technologies" />
-      <div className="flex gap-2 justify-center items-center mt-7 mb-10 flex-wrap container">
+      <div className="flex gap-2 justify-center items-center flex-wrap container">
         <SiHtml5 className="size-10" />
         <SiCss3 className="size-10" />
         <SiJavascript className="size-10" />

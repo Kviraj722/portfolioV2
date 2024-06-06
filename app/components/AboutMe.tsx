@@ -6,7 +6,7 @@ const AboutMe = () => {
   return (
     <>
       <Heading heading="Meet Viraj:" />
-      <div className="flex justify-center items-center container mt-7 rounded-md text-white">
+      <div className="flex justify-center items-center container rounded-md text-white">
         <div className="max-w-4xl p-8">
           <div className="mt-5 w-full p-6 rounded-lg shadow-lg bg-stone-950">
             <p className="mt-4 leading-relaxed text-lg">

@@ -16,34 +16,36 @@ export default function Home() {
       <div className="bg-black bg-grid-white/[0.2] relative ">
         <div className="absolute pointer-events-none inset-0 flex bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         <div className="relative z-20 bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-500 pb-8 overflow-x-hidden">
-          <AnimatedSection id="nav-bar">
-            <Navbar />
-          </AnimatedSection>
-          <AnimatedSection id="hero-section">
-            <HeroSection />
-          </AnimatedSection>
-          <AnimatedSection id="about-me">
-            <AboutMe />
-          </AnimatedSection>
-          <AnimatedSection id="experience">
-            <Experiance />
-          </AnimatedSection>
-          <AnimatedSection id="projects">
-            <Projects />
-          </AnimatedSection>
-          <AnimatedSection id="testimonials">
-            <TestiNomials />
-          </AnimatedSection>
-          <AnimatedSection id="profiles">
-            <CodingProfiles />
-          </AnimatedSection>
-          <AnimatedSection id="skills">
-            <Technologies />
-          </AnimatedSection>
-          <AnimatedSection id="contact-me">
-            <ContactMe />
-          </AnimatedSection>
-          <Footer />
+          <div className="flex flex-col gap-6">
+            <AnimatedSection id="nav-bar">
+              <Navbar />
+            </AnimatedSection>
+            <AnimatedSection id="hero-section">
+              <HeroSection />
+            </AnimatedSection>
+            <AnimatedSection id="about-me">
+              <AboutMe />
+            </AnimatedSection>
+            <AnimatedSection id="experience">
+              <Experiance />
+            </AnimatedSection>
+            <AnimatedSection id="projects">
+              <Projects />
+            </AnimatedSection>
+            <AnimatedSection id="testimonials">
+              <TestiNomials />
+            </AnimatedSection>
+            <AnimatedSection id="profiles">
+              <CodingProfiles />
+            </AnimatedSection>
+            <AnimatedSection id="skills">
+              <Technologies />
+            </AnimatedSection>
+            <AnimatedSection id="contact-me">
+              <ContactMe />
+            </AnimatedSection>
+            <Footer />
+          </div>
         </div>
       </div>
     </>

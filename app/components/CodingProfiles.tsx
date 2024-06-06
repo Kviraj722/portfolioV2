@@ -7,7 +7,7 @@ const CodingProfiles = () => {
   return (
     <div>
       <Heading heading="Profiles" />
-      <div className="flex flex-wrap container justify-evenly mt-5 mb-5">
+      <div className="flex flex-wrap container justify-evenly mx-auto p-4">
         <GithubProfile />
         <LeetCodeProfile />
       </div>

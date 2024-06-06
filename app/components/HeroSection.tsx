@@ -37,7 +37,7 @@ const HeroSection = () => {
     },
   ];
   return (
-    <div className="container mt-10 mb-10 rounded-3xl p-2 flex gap-5 flex-col justify-center items-center">
+    <div className="container rounded-3xl p-2 flex gap-5 flex-col justify-center items-center">
       <div className="items-center flex flex-col gap-5 ">
         <Image
           src={ProfilePhoto}
@@ -47,9 +47,12 @@ const HeroSection = () => {
           className="border-blue-500 border rounded-full mt-5 h-60 w-60"
         />
         <h1 className="text-2xl font-bold ">Viraj Kawa</h1>
-        <div className="flex text-3xl sm:text-3xl w-[361px] h-10 overflow-x-hidden">
+        <div className="flex text-3xl sm:text-3xl w-[361px] h-10 overflow-x-hidden overflow-y-hidden">
           I&apos;m{" "}
-          <FlipWords words={words} className="font-extrabold w-80 h-10" />
+          <FlipWords
+            words={words}
+            className="font-extrabold w-80 h-10 overflow-y-hidden"
+          />
         </div>
       </div>
       <div className="flex gap-4 items-center justify-center w-96">

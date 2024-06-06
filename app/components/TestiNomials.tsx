@@ -38,7 +38,7 @@ const TestiNomials = () => {
   ];
 
   return (
-    <div className="mt-10 mb-10">
+    <div className="">
       <Heading heading="Testinomials" />
       <div className="container p-4 mt-5 bg-stone-950 rounded-md">
         <Swiper

@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import { FaReact } from "react-icons/fa";
 
 const Experience = () => (
-  <div className="mt-10 mb-10 flex flex-col gap-2">
+  <div className="flex flex-col gap-2">
     <Heading heading="Professional History:" />
     <div className="container flex flex-col rounded-md p-6 mt-3">
       <div className="flex justify-between items-center mb-4">
