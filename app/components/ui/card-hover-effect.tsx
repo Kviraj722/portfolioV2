@@ -149,11 +149,16 @@ export const TechStack = ({
   techStacks: string[];
 }) => {
   return (
-    <div className={cn("flex space-x-2 mt-4 overflow-x-hidden", className)}>
+    <div
+      className={cn(
+        "flex flex-wrap mt-4 overflow-x-hidden gap-2",
+        className
+      )}
+    >
       {techStacks.map((tech, index) => (
         <span
           key={index}
-          className="bg-blue-600 text-white px-2 py-1 rounded-md text-xs font-extrabold"
+          className="bg-blue-600 text-white px-2 py-1 rounded-md text-xs font-extrabold mb-2"
         >
           {tech}
         </span>
