@@ -63,19 +63,19 @@ const LeetCodeProfile = () => {
           </div>
           <h2 className="text-2xl font-bold mb-2">Kviraj722</h2>
           <p>Total Questions Solved: {profileData.totalSolved}</p>
-          <div className="mt-5 mb-5 flex justify-evenly">
-            <p className="border-1 shadow-blurred-border rounded-full p-2 ">
-              <span className="text-green-400">Easy:</span>{" "}
-              {profileData.easySolved}
-            </p>
-            <p className="border-1 shadow-blurred-border rounded-full p-2 ">
-              <span className="text-orange-400">Medium</span>:{" "}
-              {profileData.mediumSolved}
-            </p>
-            <p className="border-1 shadow-blurred-border rounded-full p-2 ">
-              <span className="text-red-500">Hard</span>:{" "}
-              {profileData.hardSolved}
-            </p>
+          <div className="mt-5 mb-5 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className=" border-1 shadow-blurred-border rounded-full p-2 text-center flex flex-col">
+              <span className="text-green-400">Easy:</span>
+              <span>{profileData.easySolved}</span>
+            </div>
+            <div className=" border-1 shadow-blurred-border rounded-full p-2 text-center flex flex-col">
+              <span className="text-orange-400">Medium:</span>
+              <span>{profileData.mediumSolved}</span>
+            </div>
+            <div className=" border-1 shadow-blurred-border rounded-full p-2 text-center flex flex-col">
+              <span className="text-red-500">Hard:</span>
+              <span>{profileData.hardSolved}</span>
+            </div>
           </div>
           <p className="mt-5 mb-5">Contest Rating: {rating?.contestRating}</p>
           <Link
