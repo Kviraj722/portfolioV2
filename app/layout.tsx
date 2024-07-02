@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 // const plexoMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["300"] });
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <body className={plexoMono.className}>{children}</body> */}
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>{children}
+      <Analytics />
+      </body>
     </html>
   );
 }
