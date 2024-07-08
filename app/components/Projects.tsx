@@ -22,7 +22,7 @@ const Projects = () => {
     {
       title: "DevDetective",
       description:
-        "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
+        "A tool that can retrieve any GitHub user's profile, including their repositories, followers, and more.",
       link: "https://devdetective-kviraj.vercel.app",
       status: true,
       techStacks: ["HTML5", "CSS", "JavaScript", "Github APIs"],
