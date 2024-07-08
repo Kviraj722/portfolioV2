@@ -38,7 +38,6 @@ const ContactForm = () => {
         }, 4000);
       }
     } catch (error: any) {
-      console.log(error);
       setMessage(error.message);
       setShowMessage(true);
       setTimeout(() => {
