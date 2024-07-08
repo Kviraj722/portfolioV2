@@ -72,7 +72,7 @@ const Navbar = () => {
             <Link
               href={`#${nav.id}`}
               key={i}
-              className="block p-2 text-center bg-gray-900 hover:bg-primary-blue hover:text-white cursor-pointer"
+              className="block p-2 text-center rounded-2xl hover:bg-primary-blue hover:text-white cursor-pointer"
             >
               {nav.name}
             </Link>
