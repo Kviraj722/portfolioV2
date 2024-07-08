@@ -16,7 +16,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="container mx-auto">
+    <nav className="container mx-auto relative">
       <div className="justify-center w-full md:flex hidden p-4 rounded-full">
         <div className="hidden md:flex">
           {navs.map((nav, i) => (
@@ -36,7 +36,9 @@ const Navbar = () => {
           className="text-white focus:outline-none"
         >
           <svg
-            className={`${isOpen ? "bg-white" : "bg-black"} w-6 h-6 rounded-full`}
+            className={`${
+              isOpen ? "bg-white" : "bg-black"
+            } w-6 h-6 rounded-full transition-transform transform duration-75`}
             fill="none"
             stroke={isOpen ? "#000" : "currentColor"}
             viewBox="0 0 24 24"
@@ -60,19 +62,23 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-      {isOpen && (
-        <div className={`md:hidden bg-stone-900 p-4 rounded-lg`}>
+      <div
+        className={`md:hidden p-4 rounded-lg w-full absolute h-full transition-transform transform ${
+          isOpen ? "translate-x-0 backdrop-blur-lg" : "translate-x-full"
+        }  duration-300`}
+      >
+        <div className="h-screen">
           {navs.map((nav, i) => (
             <Link
               href={`#${nav.id}`}
               key={i}
-              className="block p-2 text-center transition-all ease-in duration-75 hover:bg-primary-blue hover:text-white rounded-lg cursor-pointer"
+              className="block p-2 text-center bg-gray-900 hover:bg-primary-blue hover:text-white cursor-pointer"
             >
               {nav.name}
             </Link>
           ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 };
