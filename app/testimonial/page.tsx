@@ -1,6 +1,6 @@
 import TestimonialForm from "../components/TestimonialForm";
 
-export default function TestiNomial() {
+export default function Testimonial() {
   return (
     <div>
       <div className="h-screen w-full bg-black bg-grid-white/[0.2] relative flex items-center justify-center">
