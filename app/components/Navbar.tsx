@@ -69,7 +69,7 @@ const Navbar = () => {
           isOpen ? "translate-x-0 backdrop-blur-lg z-[999]" : "translate-x-full"
         }  transition transform duration-300 ease-in-out`}
       >
-        <div className="h-screen p-2 backdrop-filter backdrop-blur-[20px] rounded-[10px] w-full">
+        <div className="h-screen p-2 rounded-[10px] w-full">
           {navs.map((nav, i) => (
             <Link
               href={`#${nav.id}`}

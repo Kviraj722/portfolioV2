@@ -43,3 +43,8 @@ body {
   box-sizing: border-box;
 }
 
+
+.backdrop-blur-lg {
+  -webkit-backdrop-filter: blur(20px); /* Safari support */
+  backdrop-filter: blur(20px);
+}
