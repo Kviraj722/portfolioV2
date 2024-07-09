@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white font-sans py-4">
+    <footer className="bg-black text-white font-sans">
       <div className="container mx-auto text-center">
         <p className="text-sm">
           <span className="text-blue-500">&copy;</span> 2024{" "}
