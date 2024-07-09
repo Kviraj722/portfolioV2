@@ -103,10 +103,20 @@ export default function TestimonialForm() {
               required
               name="testimonial"
             />
-            <div className="flex items-center justify-center w-full">
+            <div className="relative w-full flex items-center justify-center">
+              {image && (
+                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-[1999]">
+                  <img
+                    src={image}
+                    alt="Preview"
+                    className="max-h-full max-w-full object-cover rounded-full"
+                  />
+                </div>
+              )}
               <label
                 htmlFor="dropzone-file"
                 className="flex flex-col items-center justify-center w-full h-64 border border-dashed rounded-lg cursor-pointer bg-gray-800 hover:bg-gray-900"
+                style={{ opacity: image ? 0.5 : 1 }}
               >
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                   <svg
@@ -141,46 +151,48 @@ export default function TestimonialForm() {
                 />
               </label>
             </div>
-            {error && <p className="text-red-500">{error}</p>}
-            {loading ? (
-              <div className="w-28 p-3">
-                <Loading />
-              </div>
-            ) : (
-              <button
-                type="submit"
-                className="flex items-center w-28 p-3 rounded-md bg-gray-800 text-white font-bold hover:bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <span>Submit</span>
-                <svg
-                  className="w-5 h-5 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+            <div className="w-[960px]">
+              {loading ? (
+                <div className="w-28 p-3">
+                  <Loading />
+                </div>
+              ) : error ? (
+                <p className="text-red-500">{error}</p>
+              ) : message ? (
+                <p className="text-white w-full break-words">
+                  {message} Meanwhile, you can check out my portfolio by
+                  clicking this{" "}
+                  <Link
+                    href={"https://virajkawa.vercel.app"}
+                    className="text-blue-500"
+                  >
+                    link.
+                  </Link>
+                </p>
+              ) : (
+                <button
+                  type="submit"
+                  className="flex items-center w-28 p-3 rounded-md bg-gray-800 text-white font-bold hover:bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 12h14M12 5l7 7-7 7"
-                  ></path>
-                </svg>
-              </button>
-            )}
+                  <span>Submit</span>
+                  <svg
+                    className="w-5 h-5 ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 12h14M12 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </button>
+              )}
+            </div>
           </form>
-          {message && (
-            <p className="text-white">
-              {message} Meanwhile, you can check out my portfolio by clicking
-              this{" "}
-              <Link
-                href={"https://virajkawa.vercel.app"}
-                className="text-blue-500"
-              >
-                link.
-              </Link>
-            </p>
-          )}
         </div>
       </div>
     </>

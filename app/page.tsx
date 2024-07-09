@@ -1,13 +1,13 @@
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AboutMe from "./components/AboutMe";
-import Experiance from "./components/Experiance";
+import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
 import CodingProfiles from "./components/CodingProfiles";
-import TestiNomials from "./components/TestiNomials";
+import Testimonials from "./components/Testimonials";
 import AnimatedSection from "./components/AnimatedSection";
 
 export default function Home() {
@@ -27,14 +27,14 @@ export default function Home() {
               <AboutMe />
             </AnimatedSection>
             <AnimatedSection id="experience">
-              <Experiance />
+              <Experience />
             </AnimatedSection>
             <AnimatedSection id="projects">
               <Projects />
             </AnimatedSection>
-            {/* <AnimatedSection id="testimonials">
-              <TestiNomials />
-            </AnimatedSection>  //! Hidding as for now */}
+            <AnimatedSection id="testimonials">
+              <Testimonials />
+            </AnimatedSection> 
             <AnimatedSection id="profiles">
               <CodingProfiles />
             </AnimatedSection>
