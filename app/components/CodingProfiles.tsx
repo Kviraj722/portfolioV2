@@ -6,8 +6,8 @@ import Heading from "./Heading";
 const CodingProfiles = () => {
   return (
     <div>
-      <Heading heading="Profiles" />
-      <div className="flex flex-wrap container justify-evenly mx-auto p-4">
+      {/* <Heading heading="Profiles" /> */}
+      <div className="flex flex-wrap container justify-evenly p-4">
         <GithubProfile />
         <LeetCodeProfile />
       </div>

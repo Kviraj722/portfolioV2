@@ -36,8 +36,8 @@ import Heading from "./Heading";
 const Technologies = () => {
   return (
     <div className="container h-60">
-      <Heading heading="Technologies" />
-      <div className="flex gap-2 justify-center items-center flex-wrap container mt-2">
+      {/* <Heading heading="Technologies" /> */}
+      <div className="flex gap-2 justify-center items-center flex-wrap container">
         <SiHtml5 className="size-10" />
         <SiCss3 className="size-10" />
         <SiJavascript className="size-10" />

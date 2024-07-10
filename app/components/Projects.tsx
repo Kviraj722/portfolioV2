@@ -30,8 +30,8 @@ const Projects = () => {
   ];
   return (
     <div className="">
-      <Heading heading="Notable projects:" />
-      <div className="mt-6 flex container rounded-lg p-2">
+      {/* <Heading heading="Notable projects:" /> */}
+      <div className="flex container rounded-lg p-2">
         <HoverEffect items={projects} />
       </div>
     </div>

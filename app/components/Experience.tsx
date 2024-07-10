@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const Experience = () => (
   <div className="flex flex-col gap-2">
-    <Heading heading="Professional History:" />
-    <div className="container flex flex-col rounded-md p-6 mt-3">
+    {/* <Heading heading="Professional History:" /> */}
+    <div className="container flex flex-col rounded-md p-6">
       <div className="flex justify-between items-center mb-4">
         <div>
           <h1 className="text-3xl font-sans">Tuvoc Technologies</h1>

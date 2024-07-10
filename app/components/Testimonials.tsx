@@ -37,8 +37,8 @@ const Testimonials = () => {
     <>
       {hasTestimonials && (
         <div className="">
-          <Heading heading="Testimonials" />
-          <div className="container p-4 mt-5 bg-stone-950 rounded-2xl">
+          <Heading heading="Endorsements:" />
+          <div className="container p-4 bg-stone-950 rounded-2xl">
             <Swiper
               spaceBetween={10}
               centeredSlides={true}

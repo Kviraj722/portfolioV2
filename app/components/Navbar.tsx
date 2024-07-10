@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="container mx-auto relative">
+      <nav className="container relative">
         <div className="justify-center w-full md:flex hidden p-4 rounded-full">
           <div className="hidden md:flex">
             {navs.map((nav, i) => (
