@@ -9,7 +9,6 @@ export const connectToDB = async () => {
     return;
   }
   try {
-    console.log("process.env.mongodburi", process.env.MONGODB_URI);
     await mongoose.connect(process.env.MONGODB_URI || "");
     isConnected = true;
     console.log("MongoDB connected");
