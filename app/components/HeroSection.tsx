@@ -2,7 +2,7 @@
 import React from "react";
 import { FlipWords } from "./ui/flip-words";
 import Image from "next/image";
-import ProfilePhoto from "@/public/PorfilePhoto.jpg";
+import ProfilePhoto from "@/public/profilePhoto.jpeg";
 import Linkdeln from "@/public/Linkdeln.png";
 import Github from "@/public/github.png";
 import Twitter from "@/public/twitter.png";
@@ -43,8 +43,8 @@ const HeroSection = () => {
           src={ProfilePhoto}
           alt="profile image"
           fetchPriority="high"
-          width={300}
-          className="border-blue-500 border rounded-full mt-5 h-60 w-60"
+          width={250}
+          className="border-blue-500 border-[1px] rounded-full"
         />
         <h1 className="text-2xl font-bold ">Viraj Kawa</h1>
         <div className="flex text-3xl sm:text-3xl w-[361px] h-10 overflow-x-hidden overflow-y-hidden">
