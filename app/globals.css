@@ -59,3 +59,25 @@ body {
   -ms-overflow-style: none; 
   scrollbar-width: none;  
 }
+
+::-webkit-scrollbar {
+  width: 5px; /* Adjust the width as needed */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1f1f1f; /* Darker background for the track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3e24b1; /* Primary color for the scrollbar handle */
+  border-radius: 10px; /* Rounded corners for the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Slightly lighter color on hover */
+}
+
