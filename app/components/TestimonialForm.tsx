@@ -99,9 +99,11 @@ export default function TestimonialForm() {
             />
             <textarea
               placeholder="Testimonial"
-              className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full scroll-bar-hide p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
               name="testimonial"
+              rows={5}
+              cols={5}
             />
             <div className="relative w-full flex items-center justify-center">
               {image && (
@@ -109,7 +111,7 @@ export default function TestimonialForm() {
                   <img
                     src={image}
                     alt="Preview"
-                    className="max-h-full max-w-full object-cover rounded-full"
+                    className="h-60 w-60 object-contain rounded-full"
                   />
                 </div>
               )}
@@ -151,7 +153,7 @@ export default function TestimonialForm() {
                 />
               </label>
             </div>
-            <div className="w-[960px]">
+            <div className="container">
               {loading ? (
                 <div className="w-28 p-3">
                   <Loading />
@@ -159,7 +161,7 @@ export default function TestimonialForm() {
               ) : error ? (
                 <p className="text-red-500">{error}</p>
               ) : message ? (
-                <p className="text-white w-full break-words">
+                <p className="text-white">
                   {message} Meanwhile, you can check out my portfolio by
                   clicking this{" "}
                   <Link
