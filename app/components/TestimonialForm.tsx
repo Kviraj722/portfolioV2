@@ -29,6 +29,10 @@ export default function TestimonialForm() {
   const handleSubmit = async (e: any) => {
     setLoading(true);
     e.preventDefault();
+    if (!image) {
+      setError("Please upload image.");
+      return;
+    }
     const formData = new FormData(e.target);
     const formValues = Object.fromEntries(formData.entries());
 
@@ -141,7 +145,7 @@ export default function TestimonialForm() {
                     drag and drop
                   </p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">
-                    PNG, JPG or HEIC (MAX. 5MB)
+                    PNG, JPG or HEIC (MAX. 2MB) Mandatory
                   </p>
                 </div>
                 <input
@@ -150,6 +154,7 @@ export default function TestimonialForm() {
                   className="hidden"
                   accept="image/jpeg,image/png,image/heic"
                   onChange={handleImageChange}
+                  required
                 />
               </label>
             </div>
