@@ -1,76 +1,41 @@
 import React from "react";
-import Heading from "./Heading";
-import { FaReact } from "react-icons/fa";
 import Link from "next/link";
 
 const Experience = () => (
-  <div className="flex flex-col gap-2">
-    {/* <Heading heading="Professional History:" /> */}
-    <div className="container flex flex-col rounded-md p-6">
-      <div className="flex justify-between items-center mb-4">
-        <div>
-          <h1 className="text-3xl font-sans">Tuvoc Technologies</h1>
-          <p className="text-xs mt-2 text-gray-300">
-            Jr. Software Developer Engineer
-          </p>
-        </div>
-        <p className="font-sans">
-          2023 -{" "}
-          <span className="bg-blue-500 border-1 border-white p-1 rounded-md text-white font-semibold">
-            Present
-          </span>
-        </p>
-      </div>
-      <div className="flex justify-center bg-stone-950 container rounded-md p-2">
-        <div className="max-w-4xl">
-          <p className="text-md leading-relaxed mb-4">
-            Tuvoc Technologies is a fast-growing web and mobile app development
-            company in India, specializing in PHP, Laravel, and Custom Web and
-            App Development. The company has delivered over 100+ projects
-            worldwide and has been in operation for over 7 years. I joined Tuvoc
-            Technologies in June 2023 as a trainee for a two-month period.
-            During this time, I learned HTML, CSS, JavaScript, React, Node.js,
-            and MongoDB. After completing my training, I transitioned to working
-            on live client production projects, applying my skills to real-world
-            scenarios and contributing to the success of the client&apos;s
-            business and the company&apos;s diverse portfolio.
-          </p>
-          <div className="mt-4 text-base">
-            <ul className="list-disc pl-5 space-y-4">
-              <li>
-                <p>
-                  <span className="text-base font-extrabold font-mono">
-                    What I had done?:{" "}
-                  </span>
-                  I have had the opportunity to work on three significant
-                  projects: an MVP project, a jeweler-based ERP system, and an
-                  NFC technology project. In these projects, my primary focus
-                  has been on backend tasks, including server management and API
-                  development.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <span className="text-base font-extrabold font-mono">
-                    Impact:{" "}
-                  </span>
-                  Optimized queries in the ERP system, resulting in a 5-10%
-                  increase in server efficiency. Reduced response times by
-                  10-15%, significantly enhancing user experience (from ~1s to
-                  approximately 203ms).
-                </p>
-              </li>
-            </ul>
+  <div className="w-full space-y-6">
+    <div className="max-w-4xl mx-auto">
+      <div className="modern-card p-8">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
+          <div>
+            <h1 className="text-3xl font-bold gradient-text">Tuvoc Technologies</h1>
+            <p className="text-gray-400 mt-2 italic">Software Developer Engineer</p>
+            <p className="text-gray-400 text-sm mt-1">Ahmedabad, Gujarat</p>
+          </div>
+          <div className="mt-4 md:mt-0">
+            <span className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 text-blue-500 font-medium">
+              June 2023 – Present
+            </span>
           </div>
         </div>
+        <ul className="list-disc pl-6 space-y-3 text-gray-300">
+          <li><span className="font-semibold">Led</span> a cross-functional team of <span className="font-bold">4 engineers</span> to deliver a feature-rich product, ensuring on-time delivery and high-quality outcomes.</li>
+          <li><span className="font-semibold">Engineered</span> the backend architecture using <span className="font-bold">Application Load Balancer (ALB)</span> for high availability and consistency, contributing to a <span className="font-bold">20% revenue increase</span>.</li>
+          <li><span className="font-semibold">Constructed</span> a complete CI/CD pipeline from scratch using cloud-native solutions, <span className="font-bold">reducing</span> build and deployment time by <span className="font-bold">50%</span>.</li>
+          <li><span className="font-semibold">Integrated</span> Blockchain and AI-based services within a secured <span className="font-bold">VPC (Virtual Private Cloud)</span> setup, ensuring only the Node.js backend could access them. <span className="font-bold">Prevented</span> external internet access to sensitive services, <span className="font-bold">enhancing security</span> and controlling internal-only communication.</li>
+          <li><span className="font-semibold">Worked directly</span> with <span className="font-bold">international clients</span>, participated in <span className="font-bold">daily scrum meetings</span>, and ensured <span className="font-bold">consistent communication</span> and alignment with <span className="font-bold">business goals</span>.</li>
+        </ul>
       </div>
     </div>
-    <Link
-      href="https://drive.google.com/file/d/1aFbvI9S4SUNNcs61gq4gHrlOKb4O4R5f/view"
-      className="container font-semibold text-blue-500 text-xl flex justify-end p-2 hover:underline"
-    >
-      View Résumé
-    </Link>
+    <div className="max-w-4xl mx-auto flex justify-end">
+      <Link
+        href="https://drive.google.com/file/d/1aFbvI9S4SUNNcs61gq4gHrlOKb4O4R5f/view"
+        className="modern-button hover-lift"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Résumé
+      </Link>
+    </div>
   </div>
 );
 

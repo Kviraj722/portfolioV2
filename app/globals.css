@@ -6,9 +6,9 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,13 +22,12 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-    margin: 0;
-    padding: 0;
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  margin: 0;
+  padding: 0;
 }
 
 @layer utilities {
@@ -42,7 +41,6 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
 
 .backdrop-blur-lg {
   -webkit-backdrop-filter: blur(20px); /* Safari support */
@@ -60,24 +58,82 @@ body {
   scrollbar-width: none;  
 }
 
+/* Modern scrollbar */
 ::-webkit-scrollbar {
-  width: 5px; /* Adjust the width as needed */
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #1f1f1f; /* Darker background for the track */
-  border-radius: 10px; /* Rounded corners for the track */
+  background: rgba(0, 0, 0, 0.1);
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #3e24b1; /* Primary color for the scrollbar handle */
-  border-radius: 10px; /* Rounded corners for the handle */
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Slightly lighter color on hover */
+  background: rgba(59, 130, 246, 0.7);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Modern selection */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: white;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500;
+}
+
+/* Hover animations */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+/* Modern focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+}
+
+/* Card styles */
+.modern-card {
+  @apply rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 shadow-xl;
+}
+
+/* Button styles */
+.modern-button {
+  @apply px-4 py-2 rounded-lg bg-blue-600 text-white font-medium 
+         transition-all duration-300 hover:bg-blue-700 
+         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 
+         focus:ring-offset-gray-900 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+/* Input styles */
+.modern-input {
+  @apply px-4 py-2 rounded-lg bg-gray-900/50 border border-gray-800/50 
+         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+         placeholder-gray-500 text-white;
 }
 

@@ -115,34 +115,53 @@ const HeroSection = () => {
     },
   ];
   return (
-    <div className="container rounded-3xl p-2 flex gap-5 flex-col justify-center items-center">
-      <div className="items-center flex flex-col gap-5 ">
-        <Image
-          src={ProfilePhoto}
-          alt="profile image"
-          fetchPriority="high"
-          width={250}
-          className="border-[1px] rounded-full shadow-blurred-border"
-        />
-        <h1 className="text-2xl font-bold ">Viraj Kawa</h1>
-        <div className="flex text-3xl sm:text-3xl w-[361px] h-10 overflow-x-hidden overflow-y-hidden">
-          I&apos;m{" "}
-          <FlipWords
-            words={words}
-            className="font-extrabold w-80 h-10 overflow-y-hidden text-blue-500"
-          />
+    <div className="min-h-[80vh] flex items-center justify-center">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col items-center space-y-8">
+          <div className="relative">
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-75 blur"></div>
+            <Image
+              src={ProfilePhoto}
+              alt="profile image"
+              fetchPriority="high"
+              width={250}
+              className="relative rounded-full border-2 border-white/10 shadow-2xl transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+          
+          <div className="text-center space-y-4">
+            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+              Viraj Kawa
+            </h1>
+            
+            <div className="flex items-center justify-center space-x-2 text-2xl md:text-3xl">
+              <span className="text-gray-300">I&apos;m</span>
+              <FlipWords
+                words={words}
+                className="font-extrabold text-blue-500"
+              />
+            </div>
+            
+            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+              I build <span className="text-blue-500 font-semibold">pixel-perfect</span>,
+              accessible products for the <span className="text-blue-500 font-semibold">web</span>.
+            </p>
+          </div>
+
+          <div className="flex gap-6 items-center justify-center">
+            {socialLinks.map((link) => (
+              <Link 
+                href={link.url} 
+                key={link.id}
+                className="transform transition-all duration-300 hover:scale-110 hover:opacity-80"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.icon}
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
-      <p>
-        I build <span className="text-blue-500"> pixel-perfect</span>,
-        accessible products for the <span className="text-blue-500">web</span>.
-      </p>
-      <div className="flex gap-2 items-center justify-center w-96">
-        {socialLinks.map((link) => (
-          <Link href={link.url} key={link.id}>
-            {link.icon}
-          </Link>
-        ))}
       </div>
     </div>
   );

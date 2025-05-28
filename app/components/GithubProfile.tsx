@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { ZapIcon } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 
 const GithubProfile = () => {
@@ -30,38 +29,29 @@ const GithubProfile = () => {
   }, []);
 
   return (
-    <div className="bg-black text-white shadow-md rounded-md overflow-hidden w-full sm:w-1/2 lg:w-1/3 max-w-sm m-4">
+    <div className="modern-card p-6 flex flex-col justify-between min-h-[340px]">
       {loading && <p className="p-4">Loading...</p>}
-      {error && <p className="p-4">Error: {error}</p>}
+      {error && <p className="p-4 text-red-400">Error: {error}</p>}
       {profileData && (
-        <div className="p-4">
-          <h2 className="text-2xl font-bold mb-2 flex items-center gap-2">
-            <FaGithub />
-            {profileData.name}
-          </h2>
-          <p className="text-gray-400">@{profileData.login}</p>
-          <p className="mt-2">{profileData.bio}</p>
-          <div className="mt-4">
-            <p className="flex items-center mb-2">
-              <span className="mr-2 text-green-500">Repositories:</span>
-              {profileData.public_repos}
-            </p>
-            <p className="flex items-center mb-2">
-              <span className="mr-2 text-blue-500">Company:</span>
-              {profileData.company}
-            </p>
-            <p className="flex items-center mb-2">
-              <span className="mr-2 text-yellow-500">Location:</span>
-              {profileData.location}
-            </p>
+        <div className="flex flex-col h-full">
+          <div className="flex items-center gap-3 mb-2">
+            <FaGithub className="text-2xl text-gray-400" />
+            <h2 className="text-2xl font-bold gradient-text">{profileData.name}</h2>
+          </div>
+          <p className="text-gray-400 mb-1">@{profileData.login}</p>
+          <p className="mb-3 text-gray-300">{profileData.bio}</p>
+          <div className="flex flex-wrap gap-4 mb-4">
+            <span className="text-green-400 font-semibold">Repos: {profileData.public_repos}</span>
+            {profileData.company && <span className="text-blue-400 font-semibold">{profileData.company}</span>}
+            {profileData.location && <span className="text-yellow-400 font-semibold">{profileData.location}</span>}
           </div>
           <Link
             href={profileData.html_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline mt-4 inline-block"
+            className="modern-button w-full text-center mt-auto"
           >
-            View Profile
+            View GitHub Profile
           </Link>
         </div>
       )}

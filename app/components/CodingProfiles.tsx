@@ -1,13 +1,11 @@
 import React from "react";
 import GithubProfile from "./GithubProfile";
 import LeetCodeProfile from "./LeetCodeProfile";
-import Heading from "./Heading";
 
 const CodingProfiles = () => {
   return (
-    <div>
-      {/* <Heading heading="Profiles" /> */}
-      <div className="flex flex-wrap container justify-evenly p-4">
+    <div className="w-full">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <GithubProfile />
         <LeetCodeProfile />
       </div>

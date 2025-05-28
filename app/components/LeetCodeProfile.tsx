@@ -51,40 +51,43 @@ const LeetCodeProfile = () => {
     fetchLeetCodeProfileContestRating();
   }, []);
 
+  if (!loading && error) {
+    return null;
+  }
+
   return (
-    <div className="bg-black text-white shadow-md rounded-md overflow-hidden w-full sm:w-1/2 lg:w-1/3 max-w-sm m-4">
+    <div className="modern-card p-6 flex flex-col justify-between min-h-[340px]">
       {loading && <p className="p-4">Loading...</p>}
-      {error && <p className="p-4">Error: {error}</p>}
       {profileData && (
-        <div className="p-4">
-          <div className="flex gap-2 mb-5">
-            <ZapIcon />
-            <p>Leetcode</p>
+        <div className="flex flex-col h-full">
+          <div className="flex items-center gap-2 mb-3">
+            <ZapIcon className="text-yellow-400" />
+            <h2 className="text-2xl font-bold gradient-text">LeetCode</h2>
           </div>
-          <h2 className="text-2xl font-bold mb-2">Kviraj722</h2>
-          <p>Total Questions Solved: {profileData.totalSolved}</p>
-          <div className="mt-5 mb-5 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className=" border-1 shadow-blurred-border rounded-full p-2 text-center flex flex-col">
-              <span className="text-green-400">Easy:</span>
-              <span>{profileData.easySolved}</span>
+          <p className="text-gray-400 mb-1">@kviraj722</p>
+          <p className="mb-2 text-gray-300">Total Solved: <span className="font-semibold text-blue-400">{profileData.totalSolved}</span></p>
+          <div className="grid grid-cols-3 gap-2 mb-4">
+            <div className="rounded-lg bg-gray-900/60 p-2 text-center">
+              <span className="text-green-400 font-semibold">Easy</span>
+              <div>{profileData.easySolved}</div>
             </div>
-            <div className=" border-1 shadow-blurred-border rounded-full p-2 text-center flex flex-col">
-              <span className="text-orange-400">Medium:</span>
-              <span>{profileData.mediumSolved}</span>
+            <div className="rounded-lg bg-gray-900/60 p-2 text-center">
+              <span className="text-orange-400 font-semibold">Medium</span>
+              <div>{profileData.mediumSolved}</div>
             </div>
-            <div className=" border-1 shadow-blurred-border rounded-full p-2 text-center flex flex-col">
-              <span className="text-red-500">Hard:</span>
-              <span>{profileData.hardSolved}</span>
+            <div className="rounded-lg bg-gray-900/60 p-2 text-center">
+              <span className="text-red-500 font-semibold">Hard</span>
+              <div>{profileData.hardSolved}</div>
             </div>
           </div>
-          <p className="mt-5 mb-5">Contest Rating: {rating?.contestRating}</p>
+          <p className="mb-4 text-gray-300">Contest Rating: <span className="font-semibold text-purple-400">{rating?.contestRating}</span></p>
           <Link
             href={`https://leetcode.com/kviraj722`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
+            className="modern-button w-full text-center mt-auto"
           >
-            View Profile
+            View LeetCode Profile
           </Link>
         </div>
       )}
