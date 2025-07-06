@@ -28,7 +28,7 @@ const Experience = () => (
     </div>
     <div className="max-w-4xl mx-auto flex justify-end">
       <Link
-        href="https://drive.google.com/file/d/1aFbvI9S4SUNNcs61gq4gHrlOKb4O4R5f/view"
+        href="https://cdn.kviraj.com/VirajKawaResume.pdf"
         className="modern-button hover-lift"
         target="_blank"
         rel="noopener noreferrer"
