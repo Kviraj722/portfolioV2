@@ -31,6 +31,7 @@ import {
   SiTypescript,
   SiVisualstudiocode,
   SiPython,
+  SiFastapi,
 } from "@icons-pack/react-simple-icons";
 
 
@@ -71,6 +72,7 @@ const Technologies = () => {
           <SiStripe className="size-10" />
           <SiSocketdotio className="size-10" />
           <SiPython className="size-10" />
+          {/* <SiLangchain className="size-10" /> */}
         </div>
       </div>
     </div>

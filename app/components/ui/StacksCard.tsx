@@ -22,7 +22,7 @@ import {
   SiVisualstudiocode,
   SiVite
 } from '@icons-pack/react-simple-icons'
-import { Marquee } from '@tszhong0411/ui'
+import Marquee from 'react-fast-marquee'
 import { ZapIcon } from 'lucide-react'
 
 const StacksCard = () => {
@@ -32,7 +32,7 @@ const StacksCard = () => {
         <ZapIcon className='size-[18px]' />
         <h2 className='text-sm font-light'>Stacks</h2>
       </div>
-      <Marquee gap='20px' className='py-4' fade pauseOnHover>
+      <Marquee className='py-4' pauseOnHover gradient={false} speed={40}>
         <SiHtml5 className='size-10' />
         <SiCss3 className='size-10' />
         <SiJavascript className='size-10' />
@@ -44,7 +44,7 @@ const StacksCard = () => {
         <SiPython className='size-10' />
         <SiPostgresql className='size-10' />
       </Marquee>
-      <Marquee gap='20px' className='py-4' reverse fade pauseOnHover>
+      <Marquee className='py-4' direction='right' pauseOnHover gradient={false} speed={40}>
         <SiPrisma className='size-10' />
         <SiMysql className='size-10' />
         <SiFirebase className='size-10' />
