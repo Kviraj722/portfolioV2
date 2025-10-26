@@ -30,17 +30,15 @@ const sections = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black relative">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-      <div className="relative z-40 pt-24 sm:pt-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black">
+      <div className="bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+      <div className="">
           {sections.map(({ id, heading, component }) => (
             <AnimatedSection key={id} id={id}>
               {heading && <Heading heading={heading} />}
               {component}
             </AnimatedSection>
           ))}
-        </div>
       </div>
     </div>
   );
